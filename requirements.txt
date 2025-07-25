@@ -1,0 +1,10 @@
+Flask==3.0.0
+flask-socketio==5.3.6
+gunicorn==21.2.0
+eventlet==0.35.2
+SpeechRecognition==3.10.0
+PyAudio==0.2.14
+numpy==1.26.4
+pocketsphinx==5.0.4
+python-dotenv==1.0.1
+requests==2.31.0 

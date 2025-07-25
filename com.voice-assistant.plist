@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.voice-assistant</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/shubham/voice_assistant/venv/bin/gunicorn</string>
+        <string>--worker-class</string>
+        <string>eventlet</string>
+        <string>-w</string>
+        <string>1</string>
+        <string>--bind</string>
+        <string>0.0.0.0:8443</string>
+        <string>--certfile</string>
+        <string>/Users/shubham/voice_assistant/ssl/cert.pem</string>
+        <string>--keyfile</string>
+        <string>/Users/shubham/voice_assistant/ssl/key.pem</string>
+        <string>wsgi:app</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>WorkingDirectory</key>
+    <string>/Users/shubham/voice_assistant</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/shubham/voice_assistant/logs/error.log</string>
+    <key>StandardOutPath</key>
+    <string>/Users/shubham/voice_assistant/logs/access.log</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+</dict>
+</plist> 
